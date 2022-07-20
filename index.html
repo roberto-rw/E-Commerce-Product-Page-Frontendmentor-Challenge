@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Poppins:wght@200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/styles.css">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body>
+
+  <header class="header">
+      <nav class="nav">
+          <nav class="nav__container">
+              <img class="nav__hamburger" src="/images/icon-menu.svg" alt="">
+              <img class="nav__logo" src="/images/logo.svg" alt="">
+              <ul class="nav__menu">
+                  <li class="nav__item"><a href="" class="nav__link">Collections</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">Men</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">Woman</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">About</a></li>
+                  <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+              </ul>
+              <div class="nav__group">
+                      <img class="nav__cart" src="/images/icon-cart.svg" alt="">
+                      <img src="/images/image-avatar.png" alt="" class="nav__avatar">
+              </div>
+          </nav>
+      </nav>
+  </header>
+
+  <main class="main">
+      <div class="main__container">
+          <div class="images-container">
+                <a href="#light-box" class="main-image-container">
+                    <img src="/images/image-product-1.jpg" alt="" class="main-image">
+                </a>
+              <div class="gallery">
+
+                    <div class="gallery__img_container selected--container">
+                        <img src="/images/image-product-1.jpg" alt="" class="gallery__img selected--img">
+                    </div>
+
+                    <div class="gallery__img_container">
+                        <img src="/images/image-product-2.jpg" alt="" class="gallery__img">
+                    </div>
+
+                    <div class="gallery__img_container">
+                        <img src="/images/image-product-3.jpg" alt="" class="gallery__img">
+                    </div>
+
+                    <div class="gallery__img_container">
+                        <img src="/images/image-product-4.jpg" alt="" class="gallery__img">
+                    </div>
+
+              </div>
+          </div>
+          <div class="info-container">
+              <div class="text">
+                  <p class="text__company-title">Sneaker Company</p>
+                  <h1 class="text__product-title">Fall Limited Edition Sneakers</h1>
+                  <p class="text__info">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+                    durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                  <p class="text__precio">$125.00</p>
+                  <p class="text__descuento">50%</p>
+                  <p class="text__precio-anterior">$250.00</p>
+              </div>
+              <div class="buttons">
+                  <div class="add-sub-buttons">
+                        <!-- Terminar los botones -->
+                        <button class="add-button">
+                            <img src="/images/icon-plus.svg" alt="" class="add-button-img">
+                        </button>
+
+                        <div class="amount-button">2</div>
+
+                        <button class="minus-button">
+                            <img src="/images/icon-minus.svg" alt="" class="minus-button-img">
+                        </button>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <article class="light-box hidden" id="light-box">
+            <img class="light-box__arrow light-box__arrow--previous arrow" src="/images/icon-previous.svg" alt="">
+            <img src="/images/image-product-1.jpg" alt="" class="light-box__img">
+            <img class="light-box__arrow light-box__arrow--next arrow" src="/images/icon-next.svg" alt="">
+            <img src="/images/icon-close.svg" alt="" class="light-box__close">
+      </article>
+
+  </main>
+  
+<script src="/images.js"></script>
+</body>
+</html>

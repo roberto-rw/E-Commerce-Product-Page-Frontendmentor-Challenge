@@ -1,0 +1,69 @@
+
+$nav-bar-height: 8em;
+
+.nav{
+    height: $nav-bar-height;
+
+    &__container{
+        display: flex;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+
+        border-bottom: .1em solid gray;
+    }
+
+    &__hamburger{
+        display: none;
+    }
+
+    &__logo{}
+
+    &__menu{
+        display: flex;
+        height: 100%;
+    }
+
+    &__item{
+        width: 7em;
+        height: 100%;
+
+        list-style: none;
+        line-height: $nav-bar-height;
+        text-align: center;
+        
+        &:hover{
+            border-bottom: .5em solid orange;
+        }
+    }
+
+    &__link{
+        display: inline-block;
+        height: 100%;
+
+        font-size: 1.1rem;
+        text-decoration: none;
+
+        color: black;
+    }
+
+    &__group{
+        display: flex;
+        align-items: center;
+        gap: 2.2rem;
+    }
+
+    &__cart{
+        cursor: pointer;
+    }
+
+    &__avatar{
+        width: 4.5em;
+       
+        border-radius: 50%;
+        border: .1em solid black;
+        cursor: pointer;
+    }
+}

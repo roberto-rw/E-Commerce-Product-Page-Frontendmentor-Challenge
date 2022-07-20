@@ -1,0 +1,55 @@
+
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &__img{
+        width: 75vh;
+        border-radius: 2em;
+    }
+
+    &__arrow{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: white;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        padding: .9em;
+
+        cursor: pointer;
+    }
+
+    &__arrow--previous{
+        margin-right: 1em;
+    }
+
+    &__arrow--next{
+        margin-left: 1em;
+    }
+
+    &__close{
+        position:relative;
+        bottom: 24em;
+        right: 6em;
+
+        display: flex;
+        color: white;
+        width: 1.5em;
+        height: 1.5em;
+        cursor: pointer;
+    }
+}
+
+.hidden{
+    display: none;
+}
