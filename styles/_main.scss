@@ -1,72 +1,197 @@
 
+$color-button-add-sub: rgb(245, 245, 245);
+$color-button-add-sub--selected: rgb(230, 230, 230);
 
 .main{
     position: relative;
     display: flex;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 
     &__container{
         display: flex;
         width: 100%;
         padding: 2em;
-
-        .images-container{
-            width: 50%;
-
-            .main-image-container{
-                display: flex;
-                margin: 0 auto;
-                width: 70%;
-            }
-
-            .main-image{
-                width: 100%;
-                border-radius: 1em;
-            }
-
-            .gallery{
-                display: flex;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
-                margin-top: 2em;
-                gap: 3%;
-
-                &__img_container{
-                    display: flex;
-                    width: 15%;
-                    height: fit-content;
-                    overflow: hidden;
-                    border-radius: 1em;
-                }
-
-                &__img{
-                    display: flex;
-                    width: 100%;
-
-                    &:hover{
-                        cursor: pointer;
-                    }
-                } 
-            }
-        }
-        
-        .info-container{
-            height: 40em;
-            width: 50%;
-            padding: 3em;
-        }
     }
 }
+
+.images-container{
+    width: 50%;
+}
+
+.main-image-container{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;        
+}
+
+.main-image{
+    width: 100%;
+    border-radius: 1em;
+}
+
+.gallery{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    gap: 3%;
+
+    &__img_container{
+        display: flex;
+        width: 17.5%;
+        height: fit-content;
+        overflow: hidden;
+        border-radius: 1em;
+    }
+
+    &__img{
+        display: flex;
+        width: 100%;
+
+        &:hover{
+            cursor: pointer;
+        }
+    } 
+}
+        
+.info-container{
+    height: 40em;
+    width: 50%;
+    padding: 3em;
+}
+
+.text{
+
+    &__company-title{
+        color: orange;
+    }
+
+    &__product-title{
+        font-size: 3em;
+        margin: .8em 0;
+    }
+
+    &__info{
+        line-height: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    &__precio-descuento-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 1em;
+        align-items: center;
+        width: 14em;
+        margin-bottom: 5em;
+    }
+
+    &__precio{
+        font-size: 2.5em;
+        font-weight: 700;
+    }
+
+    &__descuento{
+         padding: .2em .5em;
+        border-radius: .5em;
+        background-color: rgb(250, 231, 195);
+        color: orange;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    &__precio-anterior{
+        color: rgb(161, 161, 161);
+        text-decoration: line-through;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+}
+     
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-sub-buttons{
+    display: flex;
+    height: 3.3em;
+    width: 35%;
+}
+
+.add-button{
+    padding: 1em;
+    width: 35%;
+    background-color: $color-button-add-sub;
+    border: none;
+    border-radius: 1em 0 0 1em;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-button-add-sub--selected;
+    }
+}
+                    
+.amount-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    background-color: $color-button-add-sub;       
+    }
+                    
+.minus-button{
+    padding: 1em;
+    width: 35%;
+    background-color: $color-button-add-sub;
+    border: none;
+    border-radius: 0 1em 1em 0;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-button-add-sub--selected;
+    }
+}
+                
+.add-to-cart-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: orange;
+    border: none;
+    border-radius: 1em;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0px 13px 15px 0px rgba(184,184,184,0.75);
+
+    &__img{
+        margin-right: 1em;
+    }
+}
+            
 
 //Para opacar la imagen seleccionada
 .selected--img{
     opacity: .5;
 }
-//Para ponerle un borde a la imagen seleccionada
+//Para ponerle un borde al contenedor de la imagen seleccionada
 .selected--container{
     border: .25em solid orange;
     border-radius: 1em;
+}
+
+@media  screen and (max-width: 1300px) {
+    .main{
+        width: 90%;
+    }
+
+    .text__product-title{
+        font-size: 2.3em;
+    }
 }
 
