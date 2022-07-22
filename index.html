@@ -26,7 +26,26 @@
                   <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
               </ul>
               <div class="nav__group">
-                      <img class="nav__cart" src="/images/icon-cart.svg" alt="">
+                      
+                      <div class="nav__cart">
+                            <img class="nav__cart-icon" src="/images/icon-cart.svg" alt="">
+                            <div class="nav__cart-counter">0</div>
+                            <div class="nav__cart-component">
+                                <div class="nav__cart-component-head">Cart</div>
+                                <table class="nav__cart-component-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>EA</td>
+                                            <td>OA</td>
+                                            <td>UA</td>
+                                        </tr>
+                                        <tr>
+                                            <button>checkout</button>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                      </div>
                       <img src="/images/image-avatar.png" alt="" class="nav__avatar">
               </div>
           </nav>
@@ -79,7 +98,7 @@
                             <img src="/images/icon-plus.svg" alt="" class="add-button-img">
                         </button>
 
-                        <div class="amount-button">0</div>
+                        <div class="amount-display">0</div>
 
                         <button class="minus-button">
                             <img src="/images/icon-minus.svg" alt="" class="minus-button-img">
@@ -90,7 +109,7 @@
                   <button class="add-to-cart-button">
                         <img src="/images/icon-cart.svg" alt="" class="add-to-cart-button__img">
                         Add to cart
-                    </button>
+                  </button>
 
               </div>
           </div>
@@ -106,5 +125,6 @@
   </main>
   
 <script src="/images.js"></script>
+<script src="/cart.js"></script>
 </body>
 </html>

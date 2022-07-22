@@ -43,6 +43,8 @@ function btnNext(){
     idImage++;
     if(idImage > 4) idImage = 1;
     setMainImage(idImage);
+    removeFocusImageGallery();
+    addFocusImageGallery();
 }
 
 function btnPrevious(){
@@ -50,6 +52,8 @@ function btnPrevious(){
     idImage--;
     if(idImage < 1) idImage = 4;
     setMainImage(idImage);
+    removeFocusImageGallery();
+    addFocusImageGallery();
 }
 
 function setMainImage(imageIndex){
@@ -58,6 +62,7 @@ function setMainImage(imageIndex){
     lightBoxImg.src = idMainImage;
 }
 
+//Remueve el focus de todas las imagenes de la galeria
 function removeFocusImageGallery(){
     galleryImagesArray.forEach(image => {
         image.classList.remove('selected--img');
@@ -65,7 +70,19 @@ function removeFocusImageGallery(){
     });
 }
 
+//Añade el focus a una imagen en la galeria
 function addFocusImageGallery(element){
+    //Si el lightbox se encuentra activo se le asignará el focus a la imagen de la galeria que tenga la misma ruta que la imagen del lightbox
+    if(!lightBox.classList.contains('hidden')){
+        galleryImagesArray.forEach(image => {
+            if(image.src == lightBoxImg.src){
+                image.classList.add('selected--img');
+                image.parentElement.classList.add('selected--container');
+                return;
+            }
+        });
+    }
+    //Si el lightbox no está activo se le asignará el focus a la imagen seleccionada en la galeria
     element.classList.add('selected--img');
     element.parentElement.classList.add('selected--container');
 }
