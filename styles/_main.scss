@@ -51,6 +51,7 @@ $color-button-add-sub--selected: rgb(230, 230, 230);
         width: 100%;
 
         &:hover{
+            opacity: .5;
             cursor: pointer;
         }
     } 
@@ -171,6 +172,10 @@ $color-button-add-sub--selected: rgb(230, 230, 230);
 
     &__img{
         margin-right: 1em;
+    }
+
+    &:hover{
+        opacity: .7;
     }
 }
             
