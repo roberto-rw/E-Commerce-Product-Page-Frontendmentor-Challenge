@@ -80,6 +80,7 @@ body {
   background-color: white;
   box-shadow: 0px 8px 25px 8px rgba(184, 184, 184, 0.75);
   z-index: 1;
+  cursor: auto;
 }
 .nav__cart-component-head {
   margin-bottom: 2em;
@@ -93,7 +94,14 @@ body {
 }
 .nav__cart-component-table-body {
   display: flex;
+  justify-content: center;
+  text-align: center;
   width: 100%;
+}
+.nav__cart-component-table-body-cart-empty-message {
+  display: none;
+  text-align: center;
+  justify-content: center;
 }
 .nav__cart-component-table-row {
   display: flex;
@@ -110,9 +118,10 @@ body {
   width: 50%;
   border-radius: 1em;
 }
-.nav__cart-component-table-cell-delete-icon {
+.nav__cart-component-table-cell-remove-icon {
   width: 1.7em;
   height: 2.3em;
+  cursor: pointer;
 }
 .nav__cart-component-table-cell:nth-child(1) {
   width: 30%;
@@ -130,7 +139,7 @@ body {
   cursor: pointer;
 }
 
-.cart-active {
+.active {
   display: flex;
 }
 
