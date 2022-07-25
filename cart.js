@@ -46,7 +46,8 @@ function renderCart(){
                     <td class="nav__cart-component-table-cell"><img src="/images/image-product-1-thumbnail.jpg" alt="" class="nav__cart-component-table-cell-img"></td>
                     <td class="nav__cart-component-table-cell"> Fall Limited Edition Sneakers $125.00 x ${cartCounterIcon.textContent} $${total}</td>
                     <td class="nav__cart-component-table-cell"><img src="/images/icon-delete.svg" alt="" class="nav__cart-component-table-cell-remove-icon"></td>
-                </tr>`;
+                </tr>
+                <button class="nav__cart-component-table-body-checkout-button">Checkout</button>`;
 
     //Verifica si el carrito se encuentra vacio antes de renderizarlo
     if(Number(cartCounterIcon.textContent) < 1){

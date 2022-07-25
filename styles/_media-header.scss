@@ -46,6 +46,19 @@ $menu-item-height: 4em;
             width: 1.5em;
         }
 
+        &__cart{
+            position: static;
+
+            &-component{
+                width: 95vw;
+                left: 2.5vw;
+            }
+
+            &-container-icon-and-counter{
+                position: relative;
+            }
+        }
+
         &__avatar{
             width: 1.5em;
         }
