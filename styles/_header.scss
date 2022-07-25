@@ -24,6 +24,10 @@ $nav-bar-height: 8em;
     &__menu{
         display: flex;
         height: 100%;
+
+        &-hide-button{
+            display: none;
+        }
     }
 
     &__item{
@@ -155,6 +159,10 @@ $nav-bar-height: 8em;
         border-radius: 50%;
         border: .1em solid black;
         cursor: pointer;
+
+        &:hover{
+            border: .1em solid orange;
+        }
     }
 }
 

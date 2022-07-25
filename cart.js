@@ -3,18 +3,21 @@ const amountDisplay = document.querySelector('.amount-display')
 const cartCounterIcon = document.querySelector('.nav__cart-counter');
 const addToCartButton = document.querySelector('.add-to-cart-button');
 const cartIcon = document.querySelector('.nav__cart-icon');
-const profileIcon = document.querySelector('.nav__avatar');
 const cartComponent = document.querySelector('.nav__cart-component');
 const tableBody = document.querySelector('.nav__cart-component-table-body');
 const cartEmptyMessage = document.querySelector('.nav__cart-component-table-body-cart-empty-message');
+const navMenu = document.querySelector('.nav__menu');
+const navMenuHamburger = document.querySelector('.nav__hamburger');
+const navHideMenuButton = document.querySelector('.nav__menu-hide-button');
 
 let counter = 0;
 
 buttonAddMinus.addEventListener('click',addMinusButton);
 addToCartButton.addEventListener('click', addToCart);
 cartIcon.addEventListener('click', showAndHideCart);
-profileIcon.addEventListener('click', showAndHideCart);
 cartComponent.addEventListener('click', removeArticle);
+navMenuHamburger.addEventListener('click', navHamburguerClick);
+navHideMenuButton.addEventListener('click', navHideMenu);
 
 
 //Aumenta o disminuye el contador segun el botón seleccionado
@@ -65,4 +68,12 @@ function removeArticle(e){
         cartCounterIcon.textContent = Number(cartCounterIcon.textContent) - 1;
         renderCart();  
     }  
+}
+
+function navHamburguerClick(){
+    navMenu.classList.add('nav__menu--enable');
+}
+
+function navHideMenu(){
+    navMenu.classList.remove('nav__menu--enable');
 }

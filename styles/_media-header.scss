@@ -1,0 +1,53 @@
+
+$nav-bar-height: 4em;
+$menu-item-height: 4em;
+
+@media screen and (max-width: 1030px) {
+    .nav{
+        height: $nav-bar-height;
+        position: relative;
+
+        &__menu{
+            position: absolute;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content:flex-start;
+            height: 100vh;
+            width: 80vw;
+            background: white;
+            z-index: 3;
+            transition: all .3s;
+            transform: translateX(-150%);
+
+            &--enable{
+                transform: translateX(0);
+            }
+
+            &-hide-button{
+                display: flex;
+                width: 1.5em;
+                margin: 1em 3em;
+            }
+        }
+
+        &__item{
+            width: 100%;
+            height: $menu-item-height;
+            line-height: $menu-item-height;
+            
+            &:hover{
+                border-bottom: none;
+            }
+        }
+
+        &__hamburger{
+            display: flex;
+            width: 1.5em;
+        }
+
+        &__avatar{
+            width: 1.5em;
+        }
+    }
+}

@@ -58,7 +58,6 @@ $color-button-add-sub--selected: rgb(230, 230, 230);
 }
         
 .info-container{
-    height: 40em;
     width: 50%;
     padding: 3em;
 }
@@ -172,6 +171,7 @@ $color-button-add-sub--selected: rgb(230, 230, 230);
 
     &__img{
         margin-right: 1em;
+        filter: brightness(300%);
     }
 
     &:hover{
