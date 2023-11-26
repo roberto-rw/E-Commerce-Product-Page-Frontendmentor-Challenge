@@ -412,7 +412,7 @@ body {
   .nav__menu-hide-button {
     display: flex;
     width: 1.5em;
-    margin: 1em 3em;
+    margin: 1.5em 2em;
   }
   .nav__item {
     width: 100%;
